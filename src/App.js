@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import React, {Fragment} from 'react';
 import './App.css';
+import Jsx from './components/jsx';
+import Lista from './components/listas';
+import  Formulario  from './components/formulario';
+import FormHook from './components/formHook';
+import Ejemplouno from './components/ejemplo1';
+
 
 function App() {
+  const saludo = 'Hola mundo';
+  const temperatura = 21;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Ejemplouno/>
+     <h1>
+        Tìtulo de saludo con Redux {saludo}
+     </h1>
+     <FormHook/>
+     <h4>
+      {temperatura > 22 ? 'Calor' : 'Frio'}
+      </h4>
+    <Jsx />
+    <Lista />
+    <Formulario/> 
+    </Fragment>
   );
 }
 
